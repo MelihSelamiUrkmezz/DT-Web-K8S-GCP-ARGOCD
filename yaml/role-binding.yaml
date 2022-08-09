@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: podrolebinding
+  namespace: worldweb-melih
+subjects:
+  - kind: User
+    name: melih.urkmez@d-teknoloji.com.tr
+    apiGroup: rbac.authorization.k8s.io/v1
+roleRef:
+  apiGroup: rbac.authorization.k8s.io/v1
+  kind: Role
+  name: podrole
