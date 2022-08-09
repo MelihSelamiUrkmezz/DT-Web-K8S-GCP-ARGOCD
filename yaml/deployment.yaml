@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: worldweb
+  name: web
 spec:
   selector:
     matchLabels:
-      app: worldweb
+      app: web
   template:
     metadata:
       labels:
-        app: worldweb
+        app: web
     spec:
       containers:
-      - name: worldwebcontainer
+      - name: webcontainer
         image: melihselamiurkmez/worldweb
         ports:
         - containerPort: 80
@@ -20,10 +20,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: worldweb-melih
+  name: web-melih
 spec:
   selector:
-    app: worldweb
+    app: web
   ports:
   - port: 8080
     targetPort: 80
