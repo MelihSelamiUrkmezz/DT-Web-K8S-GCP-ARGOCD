@@ -1,18 +1,13 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
+apiVersion: "networking.k8s.io/v1"
+kind: "Ingress"
 metadata:
-  name: minimal-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+  name: "deneme"
+  namespace: "argocd"
 spec:
-  ingressClassName: worldweb-melih
-  rules:
-  - http:
-      paths:
-      - path: /*
-        pathType: Prefix
-        backend:
-          service:
-            name: worldweb-melih
-            port:
-              number: 80
+  defaultBackend:
+    service:
+      name: "argocdlbs"
+      port:
+        number: 8080
+status:
+  loadBalancer: {}
