@@ -1,18 +1,11 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
+apiVersion: "networking.k8s.io/v1"
+kind: "Ingress"
 metadata:
-  name: minimal-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+  name: "web-ingress-melih"
+  namespace: "worldweb-melih"
 spec:
-  ingressClassName: worldweb-melih
-  rules:
-  - http:
-      paths:
-      - path: /*
-        pathType: Prefix
-        backend:
-          service:
-            name: worldweb-melih
-            port:
-              number: 80
+  defaultBackend:
+    service:
+      name: "web-loadbalancer-melih"
+      port:
+        number: 8080
