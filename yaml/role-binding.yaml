@@ -6,8 +6,8 @@ metadata:
 subjects:
   - kind: User
     name: melih.urkmez@d-teknoloji.com.tr
-    apiGroup: rbac.authorization.k8s.io/v1
+    apiGroup: rbac.authorization.k8s.io
 roleRef:
-  apiGroup: rbac.authorization.k8s.io/v1
+  apiGroup: rbac.authorization.k8s.io
   kind: Role
   name: podrole
