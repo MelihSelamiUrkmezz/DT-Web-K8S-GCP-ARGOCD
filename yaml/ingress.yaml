@@ -1,11 +1,11 @@
 apiVersion: "networking.k8s.io/v1"
 kind: "Ingress"
 metadata:
-  name: "web-melih"
+  name: "web-ingress-melih"
   namespace: "worldweb-melih"
 spec:
   defaultBackend:
     service:
-      name: "web-melih"
+      name: "web-loadbalancer-melih"
       port:
         number: 8080
