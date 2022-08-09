@@ -1,11 +1,11 @@
 apiVersion: "networking.k8s.io/v1"
 kind: "Ingress"
 metadata:
-  name: "deneme"
-  namespace: "argocd"
+  name: "worldweb-melih"
+  namespace: "worldweb-melih"
 spec:
   defaultBackend:
     service:
-      name: "argocdlbs"
+      name: "worldweb-melih"
       port:
         number: 8080
