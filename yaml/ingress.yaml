@@ -9,5 +9,3 @@ spec:
       name: "argocdlbs"
       port:
         number: 8080
-status:
-  loadBalancer: {}
