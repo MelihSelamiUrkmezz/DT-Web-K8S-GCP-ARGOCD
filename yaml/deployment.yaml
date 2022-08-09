@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: worldwebcontainer
-        image: melihselamiurkmez/worldweb
+        image: melihselamiurkmez/worldweb:1.1
         ports:
         - containerPort: 80
 ---
